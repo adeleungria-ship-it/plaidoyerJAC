@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <link rel="icon" type="image/png" href="Icon.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>COP — JAC</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    .upload-container { max-width:1100px; margin: 18px auto; padding: 18px; }
+    .file-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap:12px; }
+    .preview-card { background: #fff; border: 1px solid var(--muted-border); padding: 12px; border-radius:10px; display:flex; flex-direction:column; gap:10px; }
+    .preview-thumb { width:100%; height:140px; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#f7fdfc,#eef9f8); border-radius:6px; }
+    .preview-icon { width:72px; height:72px; color:var(--brand-dark); }
+    .preview-name { font-size:14px; color:var(--text); font-weight:700; word-break:break-word; }
+    .preview-actions { display:flex; gap:8px; }
+    .btn { padding:8px 10px; border-radius:8px; text-decoration:none; color:#fff; background:var(--brand); font-weight:700; border:none; cursor:pointer; }
+    .btn-download { background: var(--brand-dark); }
+    /* modal */
+    .modal { position:fixed; inset:0; background: rgba(10,10,10,0.5); display:none; align-items:center; justify-content:center; z-index:2000; }
+    .modal.open { display:flex; }
+    .modal-content { width:90%; max-width:1000px; height:80%; background:#fff; border-radius:8px; overflow:hidden; display:flex; flex-direction:column; }
+    .modal-toolbar { display:flex; justify-content:flex-end; gap:8px; padding:8px; background: #f7f7f7; border-bottom:1px solid var(--muted-border); }
+    .modal-frame { flex:1; border:0; width:100%; }
+  </style>
+</head>
+<body>
+  <header>
+  <img src="JAC_logo_white.png" alt="logo JAC" class="header-logo" />
+  <h1 style="font-family: 'Times New Roman', serif; font-size: 30px;">
+    Plaidoyer pour les COP — JAC
+  </h1>
+</header>
+
+
+  <main class="upload-container">
+<p style="font-family: 'Times New Roman', serif; color: darkslategray; font-size: 30px;">
+  Derniers plaidoyers :
+</p>
+<div class="file-grid">
+      <!-- Carte pour "COP Ramsar 15" -->
+      <div class="preview-card">
+        <div class="preview-thumb" aria-hidden="true">
+          <img src="rain.png" alt="Icône pluie" class="preview-icon" />
+        </div>
+        <div class="preview-name">COP Ramsar 15</div>
+        <div class="preview-actions">
+          <a class="btn btn-view" href="https://drive.google.com/file/d/1d7k5wC5a3-NjTZYWboN_JKZKNphZgAaE/view?usp=drive_link" target="_blank" rel="noopener">Voir</a>
+        </div>
+      </div>
+      <!-- Carte pour "COP Climat 30" -->
+      <div class="preview-card">
+        <div class="preview-thumb" aria-hidden="true">
+          <img src="climate-change.png" alt="Icône changement climatique" class="preview-icon" />
+        </div>
+        <div class="preview-name">COP Climat 30</div>
+        <div class="preview-actions">
+          <a class="btn btn-view" href="https://docs.google.com/document/d/1ObxNtKhjE3ZgLxSGs47hSHejN1eDagf4NBfur0rt4gY/edit?usp=sharing" target="_blank" rel="noopener">Voir</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
