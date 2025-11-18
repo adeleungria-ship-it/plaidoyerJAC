@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       const images = {
-        "Futur⸱e Directeur⸱ice du pôle plaidoyer": "images/directeur.png",
-        "Initiateur⸱ice de projet": "images/initiateur.png",
-        "Lobbyiste": "images/lobbyiste.png"
+        "Futur⸱e Directeur⸱ice du pôle plaidoyer": "directeur.jpg",
+        "Initiateur⸱ice de projet": "initiateur.png",
+        "Lobbyiste": "lobbyiste.png"
       };
 
       quizzResult.innerHTML = `
@@ -87,3 +87,4 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateImageText() { image.src = Bottom() ? "femmeparle.png" : "femme.png"; }
   window.addEventListener('scroll', updateImageText);
 });
+
