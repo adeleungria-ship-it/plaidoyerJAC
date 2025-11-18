@@ -84,8 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Perso speaking
   const image = document.querySelector('.femme');
   function Bottom() { return (window.innerHeight + window.scrollY) >= document.body.offsetHeight-80; }
-  function updateImageText() { image.src = Bottom() ? "femmeparle.png" : "femme.png"; }
+  function updateImageText() { 
+    if (Bottom()) {
+    image.src = "femmeparle.png";
+  } else {
+    image.src = "femme.png";
+  }
+  }
   window.addEventListener('scroll', updateImageText);
 });
+
 
 
