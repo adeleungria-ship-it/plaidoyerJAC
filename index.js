@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3>Tu es : <strong>${result}</strong> ! 🎉</h3>
           <p>${descriptions[result]}</p>
           <img src="${images[result]}" alt="${result}" class="quizz-result-image"/>
-        </div>
+  </div>
       `;
     });
   }
@@ -87,4 +87,5 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateImageText() { image.src = Bottom() ? "femmeparle.png" : "femme.png"; }
   window.addEventListener('scroll', updateImageText);
 });
+
 
