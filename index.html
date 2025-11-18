@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="index.css" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plaidoyer de la JAC</title>
-     <link rel="icon" type="image/png" href="Icon.png" />
-     <link
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plaidoyer de la JAC</title>
+  <link rel="stylesheet" href="index.css" />
+  <script defer src="index.js"></script>
+  <link rel="icon" type="image/png" href="Icon.png" />
+  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
 <body>
   <div class="content-offset">
+    <!-- Hero -->
     <main id="hero" class="animate__animated animate__jackInTheBox">
-      <img id="hero-logo" src="JAC_logo_vert_texte.png" alt="logo" width="500" />
+      <img id="hero-logo" src="JAC_logo_vert_texte.png" alt="logo" />
+      <div class="sub-logo">JAC - Jeunes Ambassadeurs pour le Climat</div>
     </main>
-    <main id="scroll-down" class="animate__animated animate__flash">
+
+     <main id="scroll-down" class="animate__animated animate__flash">
     <div id="scroll-arrow-container">
       <button id="scroll-arrow" class="scroll-arrow" >
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -25,49 +28,88 @@
         </svg>
       </button>
     </div>
-    
 
+    <header>
+      <img src="JAC_logo_white.png" alt="logo JAC" class="header-logo" />
+      <h1>Plaidoyer JAC - La génération des 1.5°c élève la voix</h1>
+    </header>
+    <div class="citation">Une association par les jeunes, pour les jeunes</div>
 
-   
-  <header>
-    <img src="JAC_logo_white.png" alt="logo JAC" class="header-logo" />
-    <h1>Plaidoyer JAC - La génération des 1.5°c élève la voix</h1>
-  </header>
-  <div class="citation">Une association par les jeunes, pour les jeunes</div>
-  </div>
+    <div class="page-with-sidebar">
+      <aside class="side-nav" aria-label="Navigation page">
+        <div class="side-title">SUR CE SITE</div>
+        <nav>
+          <ul>
+            <li><a href="#plaidoyers-title">Nos plaidoyers</a></li>
+            <li><a href="#projects-title">Les projets en cours</a></li>
+            <li><a href="#projects-form-title">Proposer un projet</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf91XukxVYv6-ltnS0wykEpJewZbj6isssRXjVp6Jvcww77sw/viewform" target="_blank" rel="noopener">Devenir JAC</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-  <div class="page-with-sidebar">
-    <aside class="side-nav" aria-label="Navigation page">
-      <div class="side-title">Sur ce site</div>
-      <nav>
-        <ul>
-          <li><a href="#plaidoyers-title">Nos plaidoyers</a></li>
-          <li><a href="#projects-title">Les projets en cours</a></li>
-          <li><a href="#projects-form-title">Proposer un projet</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf91XukxVYv6-ltnS0wykEpJewZbj6isssRXjVp6Jvcww77sw/viewform" target="_blank" rel="noopener">Devenir JAC </a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main class="content-main">
-      <section id="plaidoyers-title" class="plaidoyer" aria-labelledby="plaidoyer-title">
-        <div class="plaidoyer-header projects-header">
-          <div class="projects-header-inner">
-            <h2 class="projects-category">Nos plaidoyers</h2>
+      <main class="content-main">
+        <!-- Plaidoyers -->
+        <section id="plaidoyers-title" class="plaidoyer" aria-labelledby="plaidoyer-title">
+          <div class="plaidoyer-header projects-header">
+            <div class="projects-header-inner">
+              <h2 class="projects-category">Nos plaidoyers</h2>
+            </div>
           </div>
-        </div>
 
-        <div class="plaidoyers-buttons">
-          <div class="bloc-row">
-            <a href="COP.html" class="bloc bloc1">COP</a>
-            <a href="https://drive.google.com/file/d/1EcxgBaLPIT6l0SOzEbwJBgMsXvvudNJC/view?usp=sharing" class="bloc bloc2">LCOY</a>
-            <a href="https://drive.google.com/file/d/1x5fpuvzRZEA8r8RFi0ESTWLa0NSb1tMw/view?usp=sharing" class="bloc bloc3">Coalition Ocean</a>
+          <div class="plaidoyers-buttons">
+            <div class="bloc-row">
+              <a href="COP.html" class="bloc bloc1">COP</a>
+              <a href="https://drive.google.com/file/d/1EcxgBaLPIT6l0SOzEbwJBgMsXvvudNJC/view?usp=sharing" class="bloc bloc2">LCOY</a>
+              <a href="https://drive.google.com/file/d/1x5fpuvzRZEA8r8RFi0ESTWLa0NSb1tMw/view?usp=sharing" class="bloc bloc3">Coalition Ocean</a>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section class="projects" aria-labelledby="projects-title">
+          
+          <div class="quizz-section">
+            <h3>Quel membre de la team plaidoyer êtes-vous ?</h3>
+            <form id="quizz-form">
+              <label>Question 1 : Vous préférez…</label>
+              <select name="q1" required>
+                <option value="">--Choisir--</option>
+                <option value="Futur⸱e Directeur⸱ice du pôle plaidoyer">Diriger le groupe</option>
+                <option value="Initiateur⸱ice de projet">Trouver des idées</option>
+                <option value="Lobbyiste">Débattre</option>
+              </select>
+
+              <label>Question 2 : Vous êtes plutôt…</label>
+              <select name="q2" required>
+                <option value="">--Choisir--</option>
+                <option value="Initiateur⸱ice de projet">Inventif(ve)</option>
+                <option value="Futur⸱e Directeur⸱ice du pôle plaidoyer">Organisé(e)</option>
+                <option value="Lobbyiste">Sociable</option>
+              </select>
+
+              <label>Question 3 : L'adjectif qui te correspond le plus est...</label>
+              <select name="q3" required>
+                <option value="">--Choisir--</option>
+                <option value="Lobbyiste">Convainquant(e)</option>
+                <option value="Futur⸱e Directeur⸱ice du pôle plaidoyer">Rigoureux</option>
+                <option value="Initiateur⸱ice de projet">Curieux(se)</option>
+              </select>
+
+              <label>Question 4 : La tâche qui te met le plus à l'aise</label>
+              <select name="q4" required>
+                <option value="">--Choisir--</option>
+                <option value="Lobbyiste">Parler avec des décideur·se·s</option>
+                <option value="Futur⸱e Directeur⸱ice du pôle plaidoyer">Surveiller l'avancée et relire</option>
+                <option value="Initiateur⸱ice de projet">Choisir un sujet, faire des recherches</option>
+              </select>
+
+              <button type="submit" class="bloc bloc1">Voir le résultat</button>
+            </form>
+            <div id="quizz-result"></div>
+          </div>
+        </section>
+
+        
+         <section class="projects" aria-labelledby="projects-title">
         <div class="projects-header">
           <div class="projects-header-inner">
             <h2 id="projects-title" class="projects-title">Les projets en cours</h2>
@@ -108,8 +150,7 @@
           </aside>
         </div>
       </section>
-        <div style = "background-image: #78b6af;" url = "JAC_logo_white.png">
-        </div>
+        <img src="femme.png" alt="Femme" class="femme" width="500px"/>
         
         <footer class="site-footer"> 
           <div class="footer-container">
@@ -130,6 +171,6 @@
     </main>
   </div>
 
-  <script src="index.js"></script>
+  </div>
 </body>
 </html>
