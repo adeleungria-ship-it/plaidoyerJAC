@@ -7,6 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('header')?.scrollIntoView({ behavior: 'smooth' });
     });
   }
+  
+function megaphoneRain(duration = 3000, frequency = 100) {
+  const container = document.createElement('div');
+  container.className = 'megaphone-confetti';
+  document.body.appendChild(container);
+
+  const iconUnicode = '📣';
+
+  const interval = setInterval(() => {
+    const icon = document.createElement('div');
+    icon.className = 'megaphone-icon';
+    icon.style.left = Math.random() * 100 + 'vw';
+    icon.style.fontSize = (16 + Math.random() * 24) + 'px';
+    icon.style.animationDuration = (2 + Math.random() * 2) + 's';
+    icon.innerHTML = iconUnicode;
+    container.appendChild(icon);
+
+    setTimeout(() => {
+      icon.remove();
+    }, 4000); 
+  }, frequency);
+
+  setTimeout(() => {
+    clearInterval(interval);
+    setTimeout(() => container.remove(), 4000); 
+  }, duration);
+}
+
+quizzResult.addEventListener('click', () => {
+  megaphoneRain(3000, 100); // 3s, toutes les 100ms
+});
 
   // Quizz
   const quizzForm = document.getElementById('quizz-form');
@@ -93,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', updateImageText);
 });
+
 
 
 
