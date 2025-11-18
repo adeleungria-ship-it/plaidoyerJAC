@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       quizzResult.innerHTML = `
-        <div class="quizz-result-block">
+  <div class="quizz-result-block" id="quizz-result">
           <h3>Tu es : <strong>${result}</strong> ! 🎉</h3>
           <p>${descriptions[result]}</p>
           <img src="${images[result]}" alt="${result}" class="quizz-result-image"/>
@@ -80,7 +80,7 @@ function megaphoneRain(duration = 3000, frequency = 100) {
   }, duration);
 }
 
-quizzResult.addEventListener('click', () => {
+document.getElementById('quizz-result').addEventListener('click', () => {
   megaphoneRain(3000, 100);
 });
 
@@ -124,6 +124,7 @@ quizzResult.addEventListener('click', () => {
   }
   window.addEventListener('scroll', updateImageText);
 });
+
 
 
 
