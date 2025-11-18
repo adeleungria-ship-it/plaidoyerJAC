@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3>Tu es : <strong>${result}</strong> ! 🎉</h3>
           <p>${descriptions[result]}</p>
           <img src="${images[result]}" alt="${result}" class="quizz-result-image"/>
+          megaphoneRain(4000, 100);
   </div>
       `;
     });
@@ -81,7 +82,7 @@ function megaphoneRain(duration = 3000, frequency = 100) {
 }
 
 document.getElementById('quizz-result').addEventListener('click', () => {
-  megaphoneRain(3000, 100);
+  megaphoneRain(4000, 100);
 });
 
   
@@ -124,6 +125,7 @@ document.getElementById('quizz-result').addEventListener('click', () => {
   }
   window.addEventListener('scroll', updateImageText);
 });
+
 
 
 
