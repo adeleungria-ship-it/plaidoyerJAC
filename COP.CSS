@@ -92,7 +92,7 @@ p {
 }
 
 .content-right {
-  width: 500px;
+  width: 300px;
   flex-shrink: 0;
 }
 
@@ -244,3 +244,4 @@ header {
     width: 100%;
   }
 }
+
