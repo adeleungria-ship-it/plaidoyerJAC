@@ -6,6 +6,36 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('header')?.scrollIntoView({ behavior: 'smooth' });
     });
   }
+// Pie
+var data = [{
+  values: [2, 1, 1, 1],
+  labels: ['Climat', 'Biodiversité', 'Zones Humides', 'Océans'],
+  type: 'pie',
+  marker: {
+    colors: ['#2E86AB', '#F6C85F', '#6F4E7C', '#9FD356']
+  }
+}];
+
+
+var layout = {
+  autosize: true,
+  height: 600,
+  margin: {
+    l: 30,
+    r: 30,
+    b: 50,
+    t: 50,
+    pad: 10
+  },
+  paper_bgcolor: '#F1FAFB',
+  plot_bgcolor: '#F1FAFB',
+  title: {
+    text: 'Les différents types de plaidoyer réalisés pendant mon mandat',
+    font: { family: 'Poppins', size: 20, color: 'darkslategray' }
+  },
+};
+
+Plotly.newPlot('typePlaidoyer', data, layout);
 
   // Fonction pour la pluie de mégaphones
   function megaphoneRain(duration = 3000, frequency = 100) {
