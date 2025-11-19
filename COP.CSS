@@ -9,9 +9,9 @@
 
 body {
     background-color: #F1FAFB;
-  font-family: 'Poppins', sans-serif;
-  color: darkslategray;
-  font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: darkslategray;
+    font-size: 16px;
 }
 
 h1 {
@@ -35,12 +35,14 @@ footer {
   background-color: var(--brand);
   color: darkslategray;
 }
+
 .site-footer {
   background-color: var(--brand);
   color: darkslategray;
   padding: 30px 0 10px;
-  margin-top: 40px; 
+  margin-top: 40px;
 }
+
 .site-footer a {
   background-color: var(--brand);
   color: darkslategray;
@@ -57,7 +59,7 @@ footer {
 }
 
 .footer-col {
-  flex: 1; 
+  flex: 1;
   padding: 0 20px;
 }
 
@@ -66,10 +68,6 @@ footer {
   padding: 10px 0;
   margin-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.file-grid {
-  margin-bottom: 40px; 
 }
 
 p {
@@ -84,10 +82,30 @@ p {
   padding: 18px;
 }
 
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.content-left {
+  flex: 1;
+}
+
+.content-right {
+  width: 500px;
+  flex-shrink: 0;
+}
+
+.femme {
+  width: 100%;
+  height: auto;
+}
+
 .file-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 12px;
+  margin-bottom: 40px;
 }
 
 .preview-card {
@@ -98,7 +116,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: relative; 
+  position: relative;
 }
 
 header {
@@ -107,9 +125,10 @@ header {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 15px 20px;
-  display: flex; 
-  align-items: center; 
-  gap: 20px; }
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 .header-logo {
   width: 70px;
@@ -130,13 +149,15 @@ header {
   width: 72px;
   height: 72px;
   color: var(--brand-dark);
-} 
+}
+
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 12px;
 }
+
 .preview-name {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
@@ -151,7 +172,6 @@ header {
 .preview-name:hover {
   background: none;
 }
-
 
 .preview-actions {
   display: flex;
@@ -174,7 +194,6 @@ header {
   background: var(--brand-dark);
 }
 
-
 .modal {
   position: fixed;
   inset: 0;
@@ -193,7 +212,7 @@ header {
   width: 90%;
   max-width: 1000px;
   height: 80%;
-  background:#f1fafb;
+  background: #f1fafb;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -215,4 +234,13 @@ header {
   width: 100%;
 }
 
+/* Adaptation pour mobile */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
 
+  .content-right {
+    width: 100%;
+  }
+}
