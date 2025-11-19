@@ -76,9 +76,10 @@ footer {
 .femme {
   position: fixed;
   right: 20px;
-  top: 50%;
+  top: 20px;
   translate: 0 -50%;
   width: 500px;
+  z-index: 1000;
 }
 
 p {
@@ -223,3 +224,4 @@ header {
   border: 0;
   width: 100%;
 }
+
