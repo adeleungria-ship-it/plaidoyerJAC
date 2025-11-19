@@ -36,6 +36,29 @@ var layout = {
 };
 
 Plotly.newPlot('typePlaidoyer', data, layout);
+// Barre de chargement minimaliste
+const loadingBar = document.getElementById('loading-bar');
+
+function simulateLoading(duration = 1500) {
+  let width = 0;
+  const interval = 20; // ms
+  const increment = (interval / duration) * 100;
+
+  const loading = setInterval(() => {
+    width += increment;
+    if (width >= 100) {
+      width = 100;
+      clearInterval(loading);
+      setTimeout(() => {
+        document.getElementById('loading-bar-container').style.display = 'none';
+      }, 300);
+    }
+    loadingBar.style.width = width + '%';
+  }, interval);
+}
+
+// Lancer la simulation au DOMContentLoaded
+simulateLoading();
 
   // Fonction pour la pluie de mégaphones
   function megaphoneRain(duration = 3000, frequency = 100) {
