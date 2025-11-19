@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
       document.getElementById('quizz-result').addEventListener('click', () => {
         megaphoneRain(4000, 100);
+        document.getElementById('quizz-result').scrollIntoView({ behavior: 'smooth' });
       });
     });
   }
@@ -112,3 +113,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', updateImageText);
 });
+
