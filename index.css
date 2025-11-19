@@ -26,6 +26,24 @@ body {
   padding: 0;
   line-height: 1.6;
 }
+/* Barre de chargement */
+#loading-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(37,146,146,0.2); /* léger fond bleu-vert */
+  z-index: 10000;
+  overflow: hidden;
+}
+
+#loading-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #2E86AB, #57D9CC);
+  transition: width 0.3s ease;
+}
 
 #hero {
   display: flex;
