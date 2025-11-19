@@ -93,7 +93,7 @@ p {
 
 .content-right {
   width: 200px;
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 
 .femme {
@@ -244,5 +244,6 @@ header {
     width: 100%;
   }
 }
+
 
 
